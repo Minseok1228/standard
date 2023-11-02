@@ -1,7 +1,7 @@
-import { useState } from "react"; //useState는 reactlibrary에 있는 기능이라 들고와야함!
+import { useState } from "react";
 
 function App() {
-  const inintialState = ["apple", "banana", "cherry", "date", "elderberry"];
+  const inintialState = ["elderberry", "apple", "cherry", "date", "banana"];
   const [arr, setArray] = useState(inintialState);
   const [result, setResult] = useState("");
   const [query, setQuery] = useState("");
@@ -70,7 +70,7 @@ function App() {
   }
 
   function handleFind() {
-    let findedArr = arr.find(function (a) {
+    const findedArr = arr.find(function (a) {
       return a.includes(query);
     });
     setResult(findedArr);
